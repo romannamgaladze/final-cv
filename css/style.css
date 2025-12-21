@@ -15,6 +15,7 @@ a {
 .container {
   max-width: 1420px;
   margin: 0 auto;
+  border: 1px solid #e65c00;
 }
 /* ........HEADER.......... */
 header {
@@ -60,4 +61,102 @@ header {
 
 .header-li-items:hover::after {
   width: 100%;
+}
+
+/* ........Section_main.......... */
+.hero-content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 120px;
+}
+.hero-text {
+  border: 1px solid #00e636;
+  max-width: 600px;
+}
+
+.greeting {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.name {
+  color: #fd6f00;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.description {
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  line-height: 110%;
+  opacity: 0.9;
+}
+
+.btn-hire {
+  background-color: #6d3914;
+  color: white;
+  padding: 17px 52px;
+  font-size: 21px;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn-hire:hover {
+  background-color: #fd6f00;
+  transform: translateY(-2px);
+}
+
+/* Image & Social Styling */
+.hero-visual {
+  max-width: 500px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #00e636;
+}
+
+.image-circle {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.social-icons {
+  display: flex;
+  gap: 25px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  scale: calc(1.12);
 }
