@@ -220,3 +220,59 @@ h2 {
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* ........Section Services .......... */
+.section-services {
+  margin-top: 100px;
+}
+
+.services-header h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.services-header p {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Card Styles */
+.service-card {
+  background-color: #f8f8f8;
+  color: #000000;
+  flex: 1;
+  min-width: 260px;
+  max-width: 330px;
+  padding: 50px 25px;
+  border-radius: 14px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.icon-box {
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.service-card p {
+  font-size: 18px;
+  color: #000000;
+  opacity: 0.9;
+  line-height: 1.3;
+}
