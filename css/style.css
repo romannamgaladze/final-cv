@@ -107,7 +107,7 @@ header {
 }
 
 .btn-hire {
-  background-color: #6d3914;
+  background-color: #fd6f00;
   color: white;
   padding: 17px 52px;
   font-size: 21px;
@@ -117,7 +117,7 @@ header {
 }
 
 .btn-hire:hover {
-  background-color: #fd6f00;
+  background-color: #e65100;
   transform: translateY(-2px);
 }
 
@@ -169,7 +169,7 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 .div-about-me {
@@ -223,7 +223,7 @@ h2 {
 
 /* ........Section Services .......... */
 .section-services {
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 .services-header h2 {
@@ -279,7 +279,7 @@ h2 {
 
 /* ........Projects Section.......... */
 .projects-section {
-  margin-top: 100px;
+  margin-top: 120px;
   text-align: center;
 }
 
@@ -371,7 +371,7 @@ h2 {
 
 /* ........testimonial Section.......... */
 .testimonial-section {
-  margin-top: 100px;
+  margin-top: 120px;
   text-align: center;
 }
 
@@ -434,10 +434,11 @@ h2 {
   background-color: #cccccc;
   border-radius: 10px;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .dot:hover {
-  background-color: #ff7a00;
+  background-color: #fd6f00;
 }
 
 /* Mobile Responsiveness */
@@ -445,5 +446,84 @@ h2 {
   .testimonial-card {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+/* ........Contact Section.......... */
+.contact-section {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 120px;
+  text-align: center;
+}
+
+/* Form Layout */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Input Styling */
+input,
+textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 14px;
+
+  background-color: #f8f8f8;
+  font-size: 21px;
+  /* box-sizing: border-box;
+  outline: none; */
+  transition: box-shadow 0.3s ease;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Validation Colors */
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(255, 111, 0, 0.3);
+}
+
+input:invalid:not(:placeholder-shown) {
+  border: 2px solid #ff4d4d;
+}
+
+/* Button Styling */
+.submit-btn {
+  background-color: #ff6f00; /* Vibrant orange */
+  color: #ffffff;
+  padding: 15px 40px;
+  font-size: 24px;
+  font-weight: 600;
+  border-radius: 14px;
+  align-self: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #e65100;
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .input-row {
+    grid-template-columns: 1fr;
   }
 }
