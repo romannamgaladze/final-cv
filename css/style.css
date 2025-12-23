@@ -4,7 +4,6 @@ body {
   background-color: #1e1e1e;
   color: #ffffff;
   padding-top: 61px;
-  /* padding: 61px 15px 0px 15px; */
   font-family: "Poppins", sans-serif;
 }
 a {
@@ -16,7 +15,7 @@ a {
 .container {
   max-width: 1420px;
   margin: 0 auto;
-  border: 1px solid #e65c00;
+  /* border: 1px solid #e65c00; */
   padding: 0 15px;
 }
 /* ........HEADER.......... */
@@ -37,6 +36,7 @@ header {
 .logo {
   font-size: 28px;
   color: #c7c7c7;
+  letter-spacing: -1px;
 }
 .header-button {
   padding: 18px;
@@ -65,6 +65,10 @@ header {
   width: 100%;
 }
 
+.menu-icon {
+  display: none;
+}
+
 /* ........Section_main.......... */
 .hero-content {
   display: flex;
@@ -73,10 +77,10 @@ header {
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 120px;
+  margin-top: 150px;
 }
 .hero-text {
-  border: 1px solid #00e636;
+  /* border: 1px solid #00e636; */
   max-width: 600px;
 }
 
@@ -123,14 +127,13 @@ header {
   transform: translateY(-2px);
 }
 
-/* Image & Social Styling */
 .hero-visual {
   max-width: 500px;
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #00e636;
+  /* border: 1px solid #00e636; */
 }
 
 .image-circle {
@@ -171,7 +174,7 @@ header {
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 120px;
+  margin-top: 200px;
 }
 
 .div-about-me {
@@ -225,7 +228,7 @@ h2 {
 
 /* ........Section Services .......... */
 .section-services {
-  margin-top: 120px;
+  margin-top: 200px;
 }
 
 .services-header h2 {
@@ -281,7 +284,7 @@ h2 {
 
 /* ........Projects Section.......... */
 .projects-section {
-  margin-top: 120px;
+  margin-top: 200px;
   text-align: center;
 }
 
@@ -292,7 +295,6 @@ h2 {
   line-height: 1.6;
 }
 
-/* Filters */
 .filters {
   display: flex;
   justify-content: center;
@@ -317,7 +319,6 @@ h2 {
   color: #ffffff;
 }
 
-/* Grid Layout */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -360,24 +361,12 @@ h2 {
   letter-spacing: 3%;
 }
 
-@media (max-width: 992px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* ........testimonial Section.......... */
 .testimonial-section {
-  margin-top: 120px;
+  margin-top: 200px;
   text-align: center;
 }
 
-/* Card Styles */
 .testimonial-card {
   max-width: 1100px;
   margin: 0 auto;
@@ -422,7 +411,6 @@ h2 {
   font-weight: 400;
 }
 
-/* Indicators Styles */
 .indicators {
   margin-top: 40px;
   display: flex;
@@ -443,23 +431,14 @@ h2 {
   background-color: #fd6f00;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .testimonial-card {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
 /* ........Contact Section.......... */
 .contact-section {
   width: 100%;
   max-width: 1100px;
-  margin-top: 120px;
+  margin-top: 200px;
   text-align: center;
 }
 
-/* Form Layout */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -489,7 +468,6 @@ textarea {
   min-height: 120px;
 }
 
-/* Validation Colors */
 input:focus,
 textarea:focus {
   box-shadow: 0 0 0 3px rgba(255, 111, 0, 0.3);
@@ -499,9 +477,8 @@ input:invalid:not(:placeholder-shown) {
   border: 2px solid #ff4d4d;
 }
 
-/* Button Styling */
 .submit-btn {
-  background-color: #ff6f00; /* Vibrant orange */
+  background-color: #ff6f00;
   color: #ffffff;
   padding: 15px 40px;
   font-size: 24px;
@@ -521,16 +498,13 @@ input:invalid:not(:placeholder-shown) {
   transform: translateY(0);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .input-row {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* .........Footer........... */
 .footer-social-media-links {
   margin-top: 300px;
+}
+.footer-content{
+  display: flex;
+  flex-direction: column;;
 }
 .header-ul {
   display: flex;

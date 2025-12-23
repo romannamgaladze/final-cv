@@ -1,0 +1,68 @@
+@media (max-width: 1060px) {
+  .btn-hire {
+    display: none;
+  }
+  .hero-visual {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .section-about-me {
+    margin-top: 100px;
+  }
+  .section-about-me .hero-visual {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .title {
+    font-size: 64px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  .service-card {
+    min-width: 300px;
+    max-width: 100%;
+  }
+  .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 80px;
+  }
+  .category {
+    margin-top: 15px;
+  }
+  .testimonial-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .input-row {
+    grid-template-columns: 1fr;
+  }
+  .submit-btn {
+    width: 100%;
+  }
+  footer .header-ul {
+    flex-direction: column;
+  }
+  .footer-content {
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+    row-gap: 50px;
+  }
+  .footer-social-media-links {
+    margin-top: 85px;
+  }
+}
