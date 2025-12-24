@@ -8,7 +8,7 @@ const testimonials = [
   {
     name: "Sarah Jenkins",
     job: "Marketing Director",
-    text: "Incredible work! The website load speed improved by 200% and our SEO rankings skyrocketed within weeks. Highly recommended for any serious business.",
+    text: "Incredible work! The website load speed improved by 100% and our SEO rankings skyrocketed within weeks. Highly recommended for any serious business.",
     img: "img/testimonial-img/sarah-jenkins-img.png",
   },
   {
