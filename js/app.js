@@ -27,3 +27,30 @@ function initSlider() {
   setInterval(nextSlide, slideInterval);
 }
 initSlider();
+
+const skillsSection = document.querySelector(".skill-list");
+const progressFills = document.querySelectorAll(".progress-fill");
+const progressThumbs = document.querySelectorAll(".progress-thumb");
+
+function animateSkills() {
+  progressFills.forEach((fill) => {
+    fill.style.width = fill.getAttribute("data-width");
+  });
+  progressThumbs.forEach((thumb) => {
+    thumb.style.left = thumb.getAttribute("data-width");
+  });
+}
+const skillsObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateSkills();
+        skillsObserver.disconnect();
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+if (skillsSection) {
+  skillsObserver.observe(skillsSection);
+}
