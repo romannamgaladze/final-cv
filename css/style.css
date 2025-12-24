@@ -331,11 +331,14 @@ h2 {
   font-weight: 400;
   transition: 0.6s ease;
 }
+.filter-btn.active {
+  background-color: #fd6f00;
+  color: #ffffff;
+  opacity: 1;
+}
 
 .filter-btn:hover {
-  background-color: #fd6f00;
   border-color: #fd6f00;
-  color: #ffffff;
 }
 
 .projects-grid {
@@ -343,9 +346,23 @@ h2 {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
-
+.project-card.hide {
+  display: none;
+}
 .project-card {
   text-align: left;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .image-wrapper {
@@ -445,11 +462,27 @@ h2 {
   transition: 0.3s;
   cursor: pointer;
 }
-
-.dot:hover {
+.dot.active {
   background-color: #fd6f00;
+  opacity: 1;
+  width: 65px;
 }
-
+/* .dot:hover {
+  background-color: #fd6f00;
+} */
+.slide-right {
+  animation: slideInRight 0.5s ease-out;
+}
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 /* ........Contact Section.......... */
 .contact-section {
   width: 100%;

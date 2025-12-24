@@ -54,3 +54,56 @@ const skillsObserver = new IntersectionObserver(
 if (skillsSection) {
   skillsObserver.observe(skillsSection);
 }
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelector(".filter-btn.active").classList.remove("active");
+    button.classList.add("active");
+
+    const filterValue = button.getAttribute("data-filter");
+
+    projectCards.forEach((card) => {
+      if (
+        filterValue === "all" ||
+        card.getAttribute("data-category") === filterValue
+      ) {
+        card.classList.remove("hide");
+        card.classList.add("show");
+      } else {
+        card.classList.add("hide");
+        card.classList.remove("show");
+      }
+    });
+  });
+});
+
+const imgEl = document.getElementById("testi-img");
+const textEl = document.getElementById("testi-text");
+const nameEl = document.getElementById("testi-name");
+const jobEl = document.getElementById("testi-job");
+const dots = document.querySelectorAll(".dot");
+const cardEl = document.querySelector(".testimonial-card");
+
+function changeTestimonial(index) {
+  const data = testimonials[index];
+  imgEl.src = data.img;
+  textEl.innerText = data.text;
+  nameEl.innerText = data.name;
+  jobEl.innerText = data.job;
+
+  dots.forEach((dot) => dot.classList.remove("active"));
+  dots[index].classList.add("active");
+
+  cardEl.classList.remove("slide-right");
+  void cardEl.offsetWidth;
+  cardEl.classList.add("slide-right");
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    changeTestimonial(index);
+  });
+});

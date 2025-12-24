@@ -232,13 +232,13 @@
         </p>
       </div>
       <div class="filters">
-        <button class="filter-btn">All</button>
-        <button class="filter-btn active">Web Design</button>
-        <button class="filter-btn">App Design</button>
-        <button class="filter-btn">Graphic Design</button>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Design</button>
+        <button class="filter-btn" data-filter="app">App Design</button>
+        <button class="filter-btn" data-filter="graphic">Graphic Design</button>
       </div>
       <div class="projects-grid">
-        <div class="project-card">
+        <div class="project-card" data-category="web">
           <div class="image-wrapper">
             <img
               src="img/design-img/web-design1.png"
@@ -249,22 +249,22 @@
           <h3 class="project-title">AirCalling Landing Page Design</h3>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-category="app">
           <div class="image-wrapper">
             <img
               src="img/design-img/web-design2.png"
               alt="Business Landing Page"
             />
           </div>
-          <span class="category">Web Design</span>
+          <span class="category">App Design</span>
           <h3 class="project-title">Business Landing Page Design</h3>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-category="graphic">
           <div class="image-wrapper">
             <img src="img/design-img/web-design3.png" alt="Ecom Web Page" />
           </div>
-          <span class="category">Web Design</span>
+          <span class="category">Graphic Design</span>
           <h3 class="project-title">Ecom Web Page Design</h3>
         </div>
       </div>
@@ -281,30 +281,32 @@
       <div class="testimonial-card">
         <div class="profile-section">
           <img
-            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400"
-            alt="CEO Profile"
+            id="testi-img"
+            src="img/testimonial-img/david-simens-img.png"
+            alt="Profile"
           />
         </div>
         <div class="content-section">
           <p class="testimonial-text description">
             <span class="quote-mark">“</span>
-            The attention to detail and understanding of our brand identity was
-            remarkable. They didn't just deliver a product; they delivered an
-            experience that our customers love. Our conversion rates have
-            reached an all-time high, and the feedback on the new design has
-            been overwhelmingly positive. <span class="quote-mark-end">“</span>
+            <span id="testi-text">
+              The attention to detail and understanding of our brand identity
+              was remarkable. They didn't just deliver a product; they delivered
+              an experience that our customers love.</span
+            >
+            <span class="quote-mark-end">“</span>
           </p>
 
           <div class="author-info">
-            <h4>David Simens</h4>
-            <span>CEO</span>
+            <h4 id="testi-name">David Simens</h4>
+            <span id="testi-job">CEO, TechCorp</span>
           </div>
         </div>
       </div>
 
       <div class="indicators">
-        <span class="dot"></span>
         <span class="dot active"></span>
+        <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
       </div>
@@ -369,6 +371,7 @@
         </div>
       </section>
     </footer>
+    <script defer src="js/data.js"></script>
     <script defer src="js/app.js"></script>
   </body>
 </html>
