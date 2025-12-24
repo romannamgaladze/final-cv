@@ -107,3 +107,84 @@ dots.forEach((dot, index) => {
     changeTestimonial(index);
   });
 });
+
+const contactForm = document.querySelector(".contact-form");
+const modal = document.getElementById("modal-success");
+const closeModalBtn = document.getElementById("close-modal-btn");
+
+const nameInput = document.querySelector('input[placeholder="Your Name"]');
+const emailInput = document.querySelector('input[type="email"]');
+const websiteInput = document.querySelector(
+  'input[placeholder="Enter Your Website"]'
+);
+const messageInput = document.querySelector("textarea");
+
+closeModalBtn.addEventListener("click", () => {
+  modal.classList.remove("open");
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("open");
+  }
+});
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const formData = {
+    name: nameInput.value,
+    email: emailInput.value,
+    website: websiteInput.value,
+    message: messageInput.value,
+  };
+
+  console.log("აგზავნის...", formData);
+
+  fetch("https://borjomi.loremipsum.ge/api/send-message", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("სერვერის პასუხი:", data);
+
+      if (data.status === 1) {
+        modal.classList.add("open");
+        contactForm.reset();
+      } else {
+        alert("შეცდომა გაგზავნისას: " + (data.desc || "უცნობი შეცდომა"));
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+
+      sendToBackupApi();
+    });
+});
+
+function sendToBackupApi() {
+  console.log("გადავდივართ სარეზერვო სერვერზე...");
+
+  const backupData = {
+    title: nameInput.value,
+    body: messageInput.value,
+    userId: 1,
+  };
+
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(backupData),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("Backup Success:", data);
+      modal.classList.add("open");
+      contactForm.reset();
+    })
+    .catch((err) => alert("სერვერთან კავშირი ვერ დამყარდა."));
+}
